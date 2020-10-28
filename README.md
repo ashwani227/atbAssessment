@@ -13,7 +13,7 @@ Run Testcases:
 For unittest, you have to use Conda environment in your machine.
 Go to the IDE and look for file test_sem.py
 Run the file from the IDE and observe the result. 
-Please note there is only 1 test case which check whether Precedence result is expected or not. As per the description, all the semvers to be tested are valid semvers.
+Please note, as per the description, all the semvers to be tested are valid semvers.
 If the user wants to run multiple tests and check if the program is performing appropriately, please route to the sample_input.py file and can add other objects in the array or modify the existing data.
 v1, v2 should be valid semvers and should be in string format. The expected_result is the number value, where 0 means both are equal; 1 means v1 has higher precedence over v2 and -1 means v2 has higher precedence over v1
 If all the sample_input computes the exact value as corresponding expected_results, TestCase will not return any error.
