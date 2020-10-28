@@ -42,3 +42,7 @@ sample_input = [
         }
 
 ]
+
+version_list ={
+    'array_list' : ['1.0.0', '1.1.0-beta.10', '1.1.0-beta.1'],
+    'output'     : '1.1.0-beta.10'}
