@@ -50,8 +50,23 @@ def determinePrecedence(v1, v2):
     return pre_release_result
 
 
+def get_highest_precedence(semver_list):
+    # Return the semver with highest priority 
+    most_prior = semver_list[0]
+    for semver in semver_list:
+        if determinePrecedence(semver, most_prior)==1:
+            most_prior = semver
+    return most_prior
+
+
+
 def main():
+    # List of semvers to be compared
+    semver_list = ['1.0.0', '1.1.0-beta.10', '1.1.0-beta.10']
+
+    # Determining precedence between 2 versions
     result = determinePrecedence('2.1.9-beta.10', '2.1.9-beta.1')
+
     # If result is 1 then return True as you can go ahead with the new updates
     # If result is 0 which means it is the same version as before and no need for the update
     # If result < 0 then before version is of higher precedence
@@ -60,6 +75,10 @@ def main():
     else:
         decision = False
     print(decision)
+
+    high_precedence_version = get_highest_precedence(semver_list)
+    print(high_precedence_version)
+    
     return decision
 
 if __name__ == '__main__':
